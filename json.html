@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>qinhang3-json</title>
+  <title>JSON格式化工具</title>
   <!--网页标题左侧显示-->
   <link rel="icon" href="./static/img/json.svg" type="image/x-icon">
   <!--收藏夹显示图标-->
@@ -69,6 +69,9 @@
         if (event.type === "mouseout"){
           document.getElementById("previewImage").style.display = 'none';
         }
+        if (event.type === "click" && typeof node.value === 'string' && node.value.startsWith("http")) {
+          window.open(node.value);
+        }
       } else {
         console.log(event.type + ' event ' +
                 'on field ' + JSON.stringify(node.field) + ' ' +
@@ -79,7 +82,7 @@
   })
 
   const defaultJson = {
-    "name": "qinhang3-json",
+    "name": "json例子",
     "features": [
       {
         "name": "时间戳格式化",
@@ -87,10 +90,9 @@
       },
       {
         "name": "鼠标hover图片预览",
-        "demo": "https://pages.qinhang3.win/static/img/json.svg"
+        "demo": "https://avatars.githubusercontent.com/u/6925885?v=4"
       }
-    ],
-    "github": "https://github.com/qinhang3/qinhang3.github.io"
+    ]
   }
 
   editor1.updateText('')
