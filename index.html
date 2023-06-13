@@ -65,12 +65,17 @@
           document.getElementById("previewImage").style.top = Math.min(Math.max(0, window.innerHeight - 400), event.clientY + 50) + "px";
           document.getElementById("previewImage").style.left = (event.clientX + 50) + "px";
           document.getElementById("previewImage").style.display = '';
+
+          event.target.style.cursor = "pointer";
         }
         if (event.type === "mouseout"){
           document.getElementById("previewImage").style.display = 'none';
+          event.target.style.cursor = "default";
         }
         if (event.type === "click" && typeof node.value === 'string' && node.value.startsWith("http")) {
-          window.open(node.value);
+          if (event.ctrlKey || event.metaKey) {
+            window.open(node.value);
+          }
         }
       } else {
         console.log(event.type + ' event ' +
