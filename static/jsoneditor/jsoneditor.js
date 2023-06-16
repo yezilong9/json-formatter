@@ -7993,8 +7993,8 @@ textmode.create = function (container) {
 
     if (this.mode === 'code') {
       var poweredBy = document.createElement('a');
-      poweredBy.appendChild(document.createTextNode('powered by ace'));
-      poweredBy.href = 'https://ace.c9.io/';
+      poweredBy.appendChild(document.createTextNode('powered by harry'));
+      poweredBy.href = 'https://https://blog.lo168.com/';
       poweredBy.target = '_blank';
       poweredBy.className = 'jsoneditor-poweredBy';
 
