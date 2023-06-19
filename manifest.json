@@ -6,14 +6,17 @@
   "browser_action": {
     "default_icon": "static/img/icon.png"
   },
+  "action": {
+    "default_icon": "static/img/icon.png"
+  },
   "icons": {
-    "16": "static/img/icon.png",
-    "48": "static/img/icon.png",
-    "128": "static/img/icon.png"
+    "16": "static/img/16.png",
+    "32": "static/img/32.png",
+    "48": "static/img/48.png",
+    "128": "static/img/128.png"
   },
-  "background":{
-    "scripts": ["background.js"],
-    "persistent": true
+  "background": {
+    "service_worker": "background.js"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
